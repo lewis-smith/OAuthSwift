@@ -42,6 +42,9 @@ public extension NSError {
                         if let errorType = error["errorType"] as? String, errorType == "invalid_token" {
                             return true
                         }
+                        if let errorType = error["errorType"] as? String, errorType == "expired_token" {
+                            return true
+                        }
                     }
                 }
             }
